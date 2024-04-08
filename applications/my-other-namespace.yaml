@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-deployment-2
+  namespace: my-other-namespace
+spec:
+  destination:
+    name: in-cluster
+    namespace: my-other-namespace
+  project: my-project
+  source:
+    path: manifests
+    repoURL: git@github.com:brycelowe/test-nginx.git
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
