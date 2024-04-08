@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+    ignore-check.kube-linter.io/dangling-service: "Managed by argo-rollouts"
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    app: nginx

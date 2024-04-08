@@ -1,0 +1,7 @@
+apiVersion: v2
+name: test-deployment
+description: Test deployment!
+
+type: application
+
+version: 0.0.1
