@@ -5,7 +5,7 @@ metadata:
   namespace: my-namespace
 spec:
   destination:
-    name: kubernetes.default.svc
+    name: in-cluster
     namespace: my-namespace
   project: my-project
   source:

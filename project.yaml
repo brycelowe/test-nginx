@@ -7,6 +7,11 @@ spec:
   sourceNamespaces:
     - my-namespace
     - my-other-namespace
+  sourceRepos:
+    - '*'
+  destinations:
+    - namespace: '*'
+      server: '*'
   roles:
     - name: my-role
       policies:
